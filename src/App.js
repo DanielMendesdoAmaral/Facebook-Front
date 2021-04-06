@@ -57,6 +57,9 @@ function Postagem({...params}) {
       </Typography>
       <h3 style={{textAlign: "center"}}>Comentários</h3>
       {
+        params.comentarios.length < 1 ?
+        <p>Não existe nenhum comentário.</p>
+        :
         params.comentarios.map((comentario, index) => {
           return (
             <div key={index}>
@@ -123,7 +126,7 @@ function App() {
     const response = await fetch(`http://localhost:5000/postagem/page=${page}${palavrasChave==="" ? "" : `?palavrasChave=${palavrasChave.replaceAll(" ", "%")}` }`)
     const data = await response.json();
 
-    setPostagens(data.dados);
+    setPostagens(data.dados); //Vc pode colocar setData, e passar a data inteira. Ai la embaixo vc valida, se status 404, nao existe postagens, se 500, redireciona para pagina de erro de servidor, e o loading aqui está funcionando.
 
     setLoading(false);
   };
@@ -144,6 +147,12 @@ function App() {
         ? 
         
         <CircularProgress/>
+
+        :
+
+        postagens?.postagens === undefined ?
+
+        <h1>Não foi encontrada nenhuma postagem!</h1>
 
         :
 
