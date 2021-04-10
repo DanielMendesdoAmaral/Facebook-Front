@@ -1,1 +1,1 @@
-Projeto simples para estudos de alguns assuntos importantes.
+Projeto simples para estudos de alguns assuntos importantes, como consumo de API com resultados paginados e query params.
