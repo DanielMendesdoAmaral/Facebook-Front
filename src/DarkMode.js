@@ -25,6 +25,7 @@ const Button = styled.button`
     border-radius: 10px;
     padding: 5px;
     outline: none;
+    cursor: pointer;
 `;
 
 const Container = styled.div`
