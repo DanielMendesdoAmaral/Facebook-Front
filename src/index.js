@@ -4,6 +4,7 @@ import './index.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import App from './App';
 import Login from "./Login";
+import DarkMode from "./DarkMode";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -11,6 +12,7 @@ ReactDOM.render(
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route path="/dark-mode" component={DarkMode} />
         <Route path="/postagens/page=:page" component={App} />
       </Switch>
     </Router>
