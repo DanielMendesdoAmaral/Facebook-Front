@@ -6,6 +6,7 @@ import App from './App';
 import Login from "./Login";
 import DarkMode from "./DarkMode";
 import ScrollInfinito from "./ScrollInfinito";
+import LoginQrCode from "./LoginQrCode";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path="/dark-mode" component={DarkMode} />
         <Route path="/scroll-infinito" component={ScrollInfinito} />
         <Route path="/postagens/page=:page" component={App} />
+        <Route path="/login-qrcode" component={LoginQrCode} />
       </Switch>
     </Router>
   </React.StrictMode>,
